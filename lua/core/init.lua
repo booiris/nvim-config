@@ -17,7 +17,12 @@ vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
 require('neoscroll').setup()
+
 require('nvim-autopairs').setup{}
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+local cmp = require('cmp')
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
+
 require("core.keymaps")
 require("core.plugins")
 -- disable some useless standard plugins to save startup time

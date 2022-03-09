@@ -56,7 +56,8 @@ mapkey('n', '<m-t>', 'vertical resize<space>')
 -- b: buffer
 --mapcmd('<leader>bn', 'bn')
 --mapcmd('<leader>bp', 'bp')
---mapcmd('<leader>bd', 'Bdelete')
+mapcmd('<leader>bd', 'Bdelete')
+mapcmd('<leader>bw', 'bd')
 -- p: plugins
 mapcmd('<leader>pu', 'PackerSync')
 mapcmd('<leader>pi', 'PackerInstall')
@@ -113,3 +114,6 @@ vim.api.nvim_set_keymap('i', '<A-Z>', '<C-O>:'..'redo'..'<cr>', {noremap=true})
 
 -- Esc
 vim.api.nvim_set_keymap('i', 'jk', '<esc>', {noremap=true})
+
+-- code runner
+vim.api.nvim_set_keymap('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })

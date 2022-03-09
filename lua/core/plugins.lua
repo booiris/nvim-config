@@ -64,5 +64,24 @@ return require('packer').startup(function()
     
     -- center 
     use 'smithbm2316/centerpad.nvim'
-end)
+
+    -- vim-blank line
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    -- code runner 
+    use 'CRAG666/code_runner.nvim'
+
+    -- show code error tourble
+    -- use {
+    --    "folke/trouble.nvim",
+    --    requires = "kyazdani42/nvim-web-devicons",
+    --    config = function()
+    --    require("trouble").setup {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+    --   }
+
+  end
+)
 

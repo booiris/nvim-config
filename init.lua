@@ -1,5 +1,7 @@
 if not vim.g.vscode then
-	require("core")
+    require("core")
+    vim.cmd("autocmd TextYankPost * if v:event.operator is \'y\' && v:event.regname is \'\' | OSCYankReg \" | endif")
+    vim.cmd("set clipboard& clipboard^=unnamed,unnamedplus")
     vim.cmd("set undofile")
     vim.cmd("set undolevels=3000")
     vim.cmd("set undodir=~/.cache/nim/undo//")

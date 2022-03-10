@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/booiris/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
   },
+  ["vim-oscyank"] = {
+    loaded = true,
+    path = "/home/booiris/.local/share/nvim/site/pack/packer/start/vim-oscyank",
+    url = "https://github.com/ojroques/vim-oscyank"
+  },
   ["vim-startuptime"] = {
     loaded = true,
     path = "/home/booiris/.local/share/nvim/site/pack/packer/start/vim-startuptime",

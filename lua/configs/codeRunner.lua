@@ -11,7 +11,7 @@ function M.config()
         filetype = {
 		    java = "cd $dir && javac $fileName && java $fileNameWithoutExt",
             cpp = "g++ $file -o ~/.code_runner_build/$fileNameWithoutExt  && ~/.code_runner_build/$fileNameWithoutExt",
-		    -- python = "python -U",
+		    python = "python $file",
 		    -- typescript = "deno run",
 		    -- rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
 

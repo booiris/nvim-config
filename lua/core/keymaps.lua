@@ -25,6 +25,7 @@ mapcmd('<A-f>','Centerpad 15')
 -- f: file tree
 mapcmd('<C-b>', 'NvimTreeToggle')
 mapcmd('<leader>ff', 'NvimTreeFocus')
+-- mapcmd('<leader>fr', 'NvimTreeRefresh')
 -- y: telescope
 mapcmd('<leader>yf', "Telescope find_files")
 -- mapcmd('<leader>yg', "Telescope live_grep")
@@ -86,9 +87,9 @@ maplua('<leader>gp', 'vim.diagnostic.goto_prev()')
 maplua('<leader>gn', 'vim.diagnostic.goto_next()')
 maplua('<leader>gr', 'vim.lsp.buf.references()')
 
-maplua('<leader>wa', 'vim.lsp.buf.add_workspace_folder()')
-maplua('<leader>wr', 'vim.lsp.buf.remove_workspace_folder()')
-maplua('<leader>wl', 'print(vim.inspect(vim.lsp.buf.list_workspace_folders()))')
+-- maplua('<leader>wa', 'vim.lsp.buf.add_workspace_folder()')
+-- maplua('<leader>wr', 'vim.lsp.buf.remove_workspace_folder()')
+-- maplua('<leader>wl', 'print(vim.inspect(vim.lsp.buf.list_workspace_folders()))')
 -- t: terminal
 mapcmd('<leader>`', 'FloatermToggle')
 --mapcmd('<leader>tn', 'FloatermNew')

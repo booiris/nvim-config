@@ -21,6 +21,14 @@ mapcmd('<A-4>','BufferLineGoToBuffer 4')
 mapcmd('<A-5>','BufferLineGoToBuffer 5')
 mapcmd('<A-6>','BufferLineGoToBuffer 6')
 
+mapcmd('<leader>1','BufferLineGoToBuffer 1')
+mapcmd('<leader>2','BufferLineGoToBuffer 2')
+mapcmd('<leader>3','BufferLineGoToBuffer 3')
+mapcmd('<leader>4','BufferLineGoToBuffer 4')
+mapcmd('<leader>5','BufferLineGoToBuffer 5')
+mapcmd('<leader>6','BufferLineGoToBuffer 6')
+
+
 mapcmd('<A-f>','Centerpad 15') 
 -- f: file tree
 mapcmd('<C-b>', 'NvimTreeToggle')
@@ -64,8 +72,8 @@ mapcmd('<leader>pu', 'PackerSync')
 mapcmd('<leader>pi', 'PackerInstall')
 mapcmd('<leader>pc', 'PackerClean')
 -- s: search
-mapkey('n', '<leader>ss', '/')
-mapkey('n', '<leader>sw', '/\\<lt>\\><left><left>')
+-- mapkey('n', '<leader>ss', '/')
+-- mapkey('n', '<leader>sw', '/\\<lt>\\><left><left>')
 -- l/g/w: language
 -- l: general
 -- g: goto
@@ -79,12 +87,12 @@ maplua('<leader>la', 'vim.lsp.buf.code_action()')
 -- maplua('<leader>lf', 'vim.lsp.buf.formatting()')
 mapcmd('<leader>lb', 'SymbolsOutline')
 
-maplua('<leader>gD', 'vim.lsp.buf.declaration()')
+-- maplua('<leader>gD', 'vim.lsp.buf.declaration()')
 maplua('<leader>gd', 'vim.lsp.buf.definition()')
 maplua('<leader>gt', 'vim.lsp.buf.type_definition()')
 maplua('<leader>gi', 'vim.lsp.buf.implementation()')
-maplua('<leader>gp', 'vim.diagnostic.goto_prev()')
-maplua('<leader>gn', 'vim.diagnostic.goto_next()')
+-- maplua('<leader>gp', 'vim.diagnostic.goto_prev()')
+-- maplua('<leader>gn', 'vim.diagnostic.goto_next()')
 maplua('<leader>gr', 'vim.lsp.buf.references()')
 
 -- maplua('<leader>wa', 'vim.lsp.buf.add_workspace_folder()')

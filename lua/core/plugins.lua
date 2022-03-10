@@ -83,6 +83,10 @@ return require('packer').startup(function()
     --   }
     -- clipboard
     use 'ojroques/vim-oscyank'
+    
+    -- show hot key 
+    use 'folke/which-key.nvim'
+
   end
 )
 

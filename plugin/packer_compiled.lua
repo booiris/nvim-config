@@ -243,6 +243,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/booiris/.local/share/nvim/site/pack/packer/start/vim-startuptime",
     url = "https://github.com/dstein64/vim-startuptime"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/booiris/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 

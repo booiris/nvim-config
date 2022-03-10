@@ -1,5 +1,6 @@
 if not vim.g.vscode then
     require("core")
+    vim.cmd("let g:copilot_filetypes = {\'cpp\': v:false,}")
     vim.cmd("autocmd TextYankPost * if v:event.operator is \'y\' && v:event.regname is \'\' | OSCYankReg \" | endif")
     vim.cmd("set clipboard& clipboard^=unnamed,unnamedplus")
     vim.cmd("set undofile")

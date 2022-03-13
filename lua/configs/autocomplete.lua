@@ -53,16 +53,6 @@ function M.config()
         sources = cmp.config.sources({{name = 'path'}}, {{name = 'cmdline'}})
     })
 
-    -- nvim-lspconfig config
-    -- List of all pre-configured LSP servers:
-    -- github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-    local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp
-                                                                         .protocol
-                                                                         .make_client_capabilities())
-    local servers = {'clangd', 'rust_analyzer', 'pyright'}
-    for _, lsp in pairs(servers) do
-        require('lspconfig')[lsp].setup {capabilities = capabilities}
-    end
 
     local devicons = require('nvim-web-devicons')
     cmp.register_source('devicons', {

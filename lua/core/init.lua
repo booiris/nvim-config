@@ -62,6 +62,8 @@ require("core.theme")
 require("impatient")
 require("bufferline").setup()
 
+require("lsp")
+
 require("configs.autocomplete").config()
 require("configs.statusline").config()
 require("configs.filetree").config()

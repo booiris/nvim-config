@@ -125,7 +125,7 @@ vim.api.nvim_set_keymap('i', '<A-Z>', '<C-O>:'..'redo'..'<cr>', {noremap=true})
 vim.api.nvim_set_keymap('i', 'jk', '<esc>', {noremap=true})
 
 -- code runner
-vim.api.nvim_set_keymap('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<leader>r', ':w<CR>:RunCode<CR>', { noremap = true, silent = false })
 
 -- terminal
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true})

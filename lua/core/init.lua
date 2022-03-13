@@ -16,8 +16,9 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = true
 
-require("core.keymaps")
 require("core.plugins")
+
+require("lsp")
 -- disable some useless standard plugins to save startup time
 -- these features have been better covered by plugins
 -- vim.g.loaded_matchparen        = 1
@@ -62,8 +63,6 @@ require("core.theme")
 require("impatient")
 require("bufferline").setup()
 
-require("lsp")
-
 require("configs.autocomplete").config()
 require("configs.statusline").config()
 require("configs.filetree").config()
@@ -81,3 +80,4 @@ local cmp = require('cmp')
 cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
 
+require("core.keymaps")

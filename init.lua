@@ -10,5 +10,5 @@ if not vim.g.vscode then
     vim.cmd("highlight EndOfBuffer guibg=NONE ctermbg=NONE")
 
     require("core")
-    -- vim.api.nvim_command[[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
+
 end

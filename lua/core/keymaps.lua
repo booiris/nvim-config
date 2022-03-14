@@ -65,8 +65,8 @@ mapkey('n', '<m-t>', 'vertical resize<space>')
 -- b: buffer
 --mapcmd('<leader>bn', 'bn')
 --mapcmd('<leader>bp', 'bp')
-mapcmd('<leader>bd', 'Bdelete')
-mapcmd('<leader>bw', 'bd')
+mapcmd('<leader>bd', 'Bdelete!')
+mapcmd('<leader>bw', 'bd!')
 -- p: plugins
 mapcmd('<leader>pu', 'PackerSync')
 mapcmd('<leader>pi', 'PackerInstall')

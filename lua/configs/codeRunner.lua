@@ -14,7 +14,7 @@ function M.config()
 		    python = "python $file",
 		    -- typescript = "deno run",
 		    -- rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt"
-
+            rust = "cargo run"
 	    },
 	    -- filetype_path = vim.fn.expand('~/.config/nvim/code_runner.json'),
 	    -- project_path = vim.fn.expand('~/.config/nvim/project_manager.json')

@@ -1,35 +1,50 @@
 vim.g.mapleader = ' '
 
 local function mapkey(mode, lhs, rhs)
-    vim.api.nvim_set_keymap(mode, lhs, rhs, {noremap=true})
+    vim.api.nvim_set_keymap(mode, lhs, rhs, { noremap = true })
 end
 
 local function mapcmd(key, cmd)
-    vim.api.nvim_set_keymap('n', key, ':'..cmd..'<cr>', {noremap=true})
+    vim.api.nvim_set_keymap('n', key, ':' .. cmd .. '<cr>', { noremap = true })
 end
 
 local function maplua(key, txt)
-    vim.api.nvim_set_keymap('n', key, ':lua '..txt..'<cr>', {noremap=true})
+    vim.api.nvim_set_keymap('n', key, ':lua ' .. txt .. '<cr>', { noremap = true })
 end
 
+local wk = require('which-key')
+
+wk.register({
+    ["<leader>b"] = { name = "+buffer" },
+    ["<leader>c"] = { name = "+quick" },
+    ["<leader>f"] = { name = "+nvimtree" },
+    ["<leader>g"] = { name = "+goto define" },
+    ["<leader>h"] = { name = "+git" },
+    ["<leader>l"] = { name = "+lsp" },
+    ["<leader>p"] = { name = "+packer" },
+    ["<leader>w"] = { name = "+window" },
+    ["<leader>y"] = { name = "+telescope" },
+})
+
+
 -- keymaps
--- buffer view change 
-mapcmd('<A-1>','BufferLineGoToBuffer 1')
-mapcmd('<A-2>','BufferLineGoToBuffer 2')
-mapcmd('<A-3>','BufferLineGoToBuffer 3')
-mapcmd('<A-4>','BufferLineGoToBuffer 4')
-mapcmd('<A-5>','BufferLineGoToBuffer 5')
-mapcmd('<A-6>','BufferLineGoToBuffer 6')
+-- buffer view change
+mapcmd('<A-1>', 'BufferLineGoToBuffer 1')
+mapcmd('<A-2>', 'BufferLineGoToBuffer 2')
+mapcmd('<A-3>', 'BufferLineGoToBuffer 3')
+mapcmd('<A-4>', 'BufferLineGoToBuffer 4')
+mapcmd('<A-5>', 'BufferLineGoToBuffer 5')
+mapcmd('<A-6>', 'BufferLineGoToBuffer 6')
 
-mapcmd('<leader>1','BufferLineGoToBuffer 1')
-mapcmd('<leader>2','BufferLineGoToBuffer 2')
-mapcmd('<leader>3','BufferLineGoToBuffer 3')
-mapcmd('<leader>4','BufferLineGoToBuffer 4')
-mapcmd('<leader>5','BufferLineGoToBuffer 5')
-mapcmd('<leader>6','BufferLineGoToBuffer 6')
+mapcmd('<leader>1', 'BufferLineGoToBuffer 1')
+mapcmd('<leader>2', 'BufferLineGoToBuffer 2')
+mapcmd('<leader>3', 'BufferLineGoToBuffer 3')
+mapcmd('<leader>4', 'BufferLineGoToBuffer 4')
+mapcmd('<leader>5', 'BufferLineGoToBuffer 5')
+mapcmd('<leader>6', 'BufferLineGoToBuffer 6')
 
 
-mapcmd('<A-f>','Centerpad 15') 
+mapcmd('<A-f>', 'Centerpad 15')
 -- f: file tree
 mapcmd('<C-b>', 'NvimTreeToggle')
 mapcmd('<leader>ff', 'NvimTreeFocus')
@@ -107,25 +122,25 @@ maplua('<A-F>', 'vim.lsp.buf.formatting()')
 maplua('<leader>lf', 'vim.lsp.buf.formatting()')
 
 -- save
-vim.api.nvim_set_keymap('n', '<C-s>', ':'..'w'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('v', '<C-s>', '<C-C>:'..'w'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('i', '<C-s>', '<C-O>:'..'w'..'<cr>', {noremap=true})
+vim.api.nvim_set_keymap('n', '<C-s>', ':' .. 'w' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-s>', '<C-C>:' .. 'w' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-s>', '<C-O>:' .. 'w' .. '<cr>', { noremap = true })
 
 -- undo
-vim.api.nvim_set_keymap('n', '<C-z>', ':'..'u'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('v', '<C-z>', '<C-C>:'..'u'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('i', '<C-z>', '<C-O>:'..'u'..'<cr>', {noremap=true})
+vim.api.nvim_set_keymap('n', '<C-z>', ':' .. 'u' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<C-z>', '<C-C>:' .. 'u' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<C-z>', '<C-O>:' .. 'u' .. '<cr>', { noremap = true })
 
 -- redo
-vim.api.nvim_set_keymap('n', '<A-Z>', ':'..'redo'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('v', '<A-Z>', '<C-C>:'..'redo'..'<cr>', {noremap=true})
-vim.api.nvim_set_keymap('i', '<A-Z>', '<C-O>:'..'redo'..'<cr>', {noremap=true})
+vim.api.nvim_set_keymap('n', '<A-Z>', ':' .. 'redo' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('v', '<A-Z>', '<C-C>:' .. 'redo' .. '<cr>', { noremap = true })
+vim.api.nvim_set_keymap('i', '<A-Z>', '<C-O>:' .. 'redo' .. '<cr>', { noremap = true })
 
 -- Esc
-vim.api.nvim_set_keymap('i', 'jk', '<esc>', {noremap=true})
+vim.api.nvim_set_keymap('i', 'jk', '<esc>', { noremap = true })
 
 -- code runner
 vim.api.nvim_set_keymap('n', '<leader>r', ':w<CR>:RunCode<CR>', { noremap = true, silent = false })
 
 -- terminal
-vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', {noremap=true})
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })

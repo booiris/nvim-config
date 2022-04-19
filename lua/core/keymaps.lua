@@ -144,3 +144,9 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':w<CR>:RunCode<CR>', { noremap = true
 
 -- terminal
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
+
+-- choose all
+mapkey('n', '<C-a>', 'ggvG$')
+
+-- copy
+mapkey('v', '<C-c>', 'y')

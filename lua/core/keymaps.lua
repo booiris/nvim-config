@@ -146,7 +146,7 @@ vim.api.nvim_set_keymap('n', '<leader>r', ':w<CR>:RunCode<CR>', { noremap = true
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true })
 
 -- choose all
-mapkey('n', '<C-a>', 'ggvG$')
+mapkey('n', '<C-a>', 'gg0vG$')
 
 -- copy
 mapkey('v', '<C-c>', 'y')
